@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letters - Letter Agenda</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/letters.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <h2>Letter Agenda</h2>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="letters.html">Letters</a></li>
+            <li id="adminLink" style="display: none;"><a href="admin.html">Admin</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+        </ul>
+    </nav>
+    <main class="content">
+        <div id="lettersListContainer">
+            <h1>Your Letters</h1>
+            <div class="letters-actions">
+                <button id="newLetterBtn" class="btn-primary">New Letter</button>
+            </div>
+            <div id="lettersList" class="letters-grid"></div>
+        </div>
+        
+        <div id="letterEditorContainer" style="display: none;">
+            <h1 id="editorTitle">New Letter</h1>
+            <div class="editor-actions">
+                <select id="letterType">
+                    <option value="letter">Letter</option>
+                    <option value="agenda">Agenda</option>
+                </select>
+                <input type="text" id="letterTitle" placeholder="Letter Title">
+                <button id="saveLetterBtn" class="btn-primary">Save</button>
+                <button id="downloadPdfBtn" class="btn-secondary">Download PDF</button>
+                <button id="downloadDocxBtn" class="btn-secondary">Download DOCX</button>
+                <button id="cancelEditBtn" class="btn-secondary">Cancel</button>
+                <button id="deleteLetterBtn" class="btn-danger" style="display: none;">Delete</button>
+            </div>
+            <div id="editor" contenteditable="true"></div>
+        </div>
+    </main>
+    
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.1.0/docx.min.js"></script>
+    <script src="js/letters.js"></script>
+</body>
+</html>
