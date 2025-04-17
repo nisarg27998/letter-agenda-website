@@ -1,11 +1,12 @@
 // Firebase configuration
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyC8P10npnYxArqIVBKRgnhWQ1r58PxzTmo",
+  authDomain: "letteragenda.firebaseapp.com",
+  projectId: "letteragenda",
+  storageBucket: "letteragenda.firebasestorage.app",
+  messagingSenderId: "504998774900",
+  appId: "1:504998774900:web:b92f35b5c9186817732921",
+  measurementId: "G-TG6M7L1V54"
 };
 
 // Initialize Firebase
